@@ -1,0 +1,420 @@
+<!---
+THEME BY:
+  ___   ___           _    
+ / _ \ / _ \  _ __   | |__
+ \_, / \_, / | '  \  | '_ \
+  /_/   /_/  |_|_|_| |_.__/
+ 
+(slide out navigation: http://codepen.io/rdallaire/pen/zcqjx)
+--->
+ 
+<html><head><title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+ 
+<meta name="color:Background" content="#f3f3f3">
+<meta name="color:Text" content="#000000">
+<meta name="color:Links" content="#898989">
+<meta name="color:Links Hover" content="#fddd2d">
+<meta name="color:Bold" content="#f3416d">
+<meta name="color:Pic Border" content="#f1f1f1">
+<meta name="color:Source" content="#b3b3b3">
+<meta name="color:Header BG" content="#000000">
+<meta name="color:Header Title" content="#ffffff">
+<meta name="color:Subtitle" content="#ffffff">
+<meta name="color:Side Links" content="#ffffff">  
+<meta name="color:Side Links BG" content="#ff80a1">  
+<meta name="color:Scrollbar" content="#ff9ebc">
+<meta name="color:Tags" content="#000000">
+<meta name="color:Date" content="#000000">
+<meta name="color:Title Color" content="#000000">
+<meta name="color:Sidebar BG" content="#ffffff">
+<meta name="color:Sidebar Title BG" content="#000000">
+<meta name="color:Sidebar Title" content="#ffffff">
+ 
+<meta name="image:1050x480 Header 1" content=""/>
+<meta name="image:1050x480 Header 2" content=""/>
+<meta name="image:1050x480 Header 3" content=""/>
+<meta name="image:1050x480 Header 4" content=""/>
+ 
+<meta name="text:Subtitle" content="this is your subtitle">
+<meta name="text:2nd Link URL" content="">
+<meta name="text:2nd Link Title" content="link 2">
+<meta name="text:3rd Link URL" content="">
+<meta name="text:3rd Link Title" content="link 3">
+<meta name="text:4th Link URL" content="">
+<meta name="text:4th Link Title" content="link 4">
+<meta name="text:5th Link URL" content="">
+<meta name="text:5th Link Title" content="link 5">
+<meta name="text:6th Link URL" content="">
+<meta name="text:6th Link Title" content="link 6">
+ 
+<meta name="text:3rd Sidebar Title" content="3rd Sidebar Title">
+<meta name="text:3rd Sidebar Content" content="REPLACE THIS WITH 3RD SIDEBAR CONTENT"/>
+<meta name="text:4th Sidebar Title" content="4th Sidebar Title">
+<meta name="text:4th Sidebar Content" content="REPLACE THIS WITH 4th SIDEBAR CONTENT"/>
+ 
+<meta name="text:Event 1" content="<b>141012</b> Event here"/>
+<meta name="text:Event 2" content="<b>141019</b> Event here"/>
+<meta name="text:Event 3" content=""/>
+<meta name="text:Event 4" content=""/>
+<meta name="text:Event 5" content=""/>
+ 
+<meta name="text:Disclaimer" content=""/>
+ 
+ 
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+ <script type="text/javascript" src="http://static.tumblr.com/tyt3xth/xgQmuff5c/slidedshow.js">
+ 
+/***********************************************
+* Ultimate Fade In Slideshow v2.0- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script
+***********************************************/
+ 
+</script>
+ 
+<script type="text/javascript">
+ 
+var mygallery=new fadeSlideShow({
+    wrapperid: "fadeshow1", //ID of blank DIV on page to house Slideshow
+        dimensions: [1050, 480], //width/height of gallery in pixels. Should reflect dimensions of largest image
+        imagearray: [
+        ["{image:1050x480 Header 1}"],
+        ["{image:1050x480 Header 2}"],
+        ["{image:1050x480 Header 3}"],
+        ["{image:1050x480 Header 4}"] //<--no trailing comma after very last image element!
+        ],
+        displaymode: {type:'auto', pause:4600, cycles:0, wraparound:false},
+        persist: false, //remember last viewed slide and recall within same session?
+        fadeduration: 500, //transition duration (milliseconds)
+        descreveal: "ondemand",
+        togglerid: ""
+})
+ 
+</script>
+ 
+<script type="text/javascript" src="http://static.tumblr.com/p2evvtm/Wycm17d1m/tumblr_search_box.js"></script>
+ 
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+ 
+<style type="text/css">
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+ 
+body {background-color:{color:Background}; color:{color:Text}; padding:0;margin:0;height:100%; overflow-x:hidden; font-family:'PT Sans', sans-serif; font-size:12px; text-transform:normal; line-height:12px; word-wrap:break-word;}
+ 
+b, strong {font-weight: bold; color:{color:Bold};}
+i, italic, em {font-style: italic;}
+ 
+a:link, a:active, a:visited {color:{color:Links}; text-decoration: none; -webkit-transition: opacity 0.5s linear; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease;}
+a:hover {color:{color:Links Hover}; text-decoration:none;}
+ 
+div#container2 {position:relative; margin:auto; margin-top:30px; min-height:100%; width:1050px; padding:20px; background:#fff; overflow-x:hidden; overflow:auto;}
+ 
+#postcontain {float:left; width:480px; position:relative;}
+#picture {width:520px; padding:15px; margin:30px 25px 45px 35px; border:1px solid {color:Pic Border};}
+.picturebord {width:500px; padding:5px;}
+.picturebord img {float:left; max-width:500px;}
+#pictureperm {width:500px; float:center; margin-left:20px;font-size:11px;}
+ 
+/* SOURCES -----------------------------------*/
+.tags {font-size:10px; padding:5px; width:485px; line-height:15px; margin-top:4px;} .tag {font-size:11px; text-transform:uppercase;} .tag a, .tags a {color:{color:Tags};} .tags b {text-transform:uppercase;} .tag:after {content: ",";} .tag:last-child:after { content: " ";}
+ 
+#source {width:495px; text-align:right; color:{color:Text}; line-height:5px; font-size:9px;}
+ 
+#perm {width:500px; text-align:right; margin:5px 5px 12px 5px; border-bottom:1px solid {color:Pic Border}; font-size:10px; color:{color:Source};} #perm a {color:{color:Source};}
+.date {font-size:11px; text-transform:uppercase; padding-bottom:5px; color:{color:Date}; font-weight:bold; line-height:22px; border-bottom:3px solid {color:Side Links BG};}
+ 
+/* SIDEBARS -----------------------------------*/
+#side {position:relative; float:right; margin-right:50px; margin-top:50px; width:320px; z-index:3;}
+.info {width:330px;}
+.welc {font-weight:bold; font-size:14px; letter-spacing:1px; font-style:italic; color:{color:Sidebar Title}; background:{color:Sidebar Title BG}; text-transform:uppercase; padding:18px;}
+.sidedesc {padding:5px; font-size:11px; line-height:15px; text-align:justify; color:#555; background:{color:Sidebar BG}; border:1px solid {color:Pic Border};}
+.ssidedesc {padding:5px; font-size:11px; line-height:25px; text-align:justify; color:#555; background:{color:Sidebar BG}; border:1px solid {color:Pic Border};} .ssidedesc b {color:{color:Text}; font-size:13px; border-bottom:2px solid {color:Side Links BG}; }
+ 
+/* HEADER -----------------------------------*/
+#header {position:absolute; left:0%; top:0%; width:100%; height:auto; background:{color:Header BG}; z-index:9990;}
+#headback {position:relative; margin:auto; width:1050px; height:480px;}
+.toplinks {padding:0px 30px 30px 30px; width:310px; font-size:15px; color:{color:Bold}; text-transform:uppercase; line-height:30px;} .toplinks a {color:{color:Header Title}; font-weight:bold; padding:4px; border:1px solid {color:Header BG};} .toplinks a:hover {border:1px solid {color:Header Title};}
+ 
+/* CAPTION -----------------------------------*/
+blockquote {border-left:2px solid {color:Pic Border}; padding-left:10px; margin-left:30px;} small {font-size:11px;} sub {font-size:11px;} pre {font-size:11px;} blockquote img {max-width:37em; max-height:37em}
+.caption {line-height:15px; margin-top:5px; width:510px; overflow:hidden; padding-left:7px;}
+ 
+/* ASK & TITLES ----------------------------------*/
+#question {padding:8px; border-bottom:1px solid {color:Bold}; line-height:16px;} #question b {color:{color:Text};}
+ 
+.title {Font-size:25px;font-weight:bold; color:{color:Title Color}; text-align:Center; text-transform:uppercase; line-height:25px; padding:10px;}
+ 
+.btitle {font-size:25px; color:{color:Header Title}; font-weight:bold; text-transform:uppercase; padding:30px; float:left;}
+.sb {margin-top:30px; color:{color:Subtitle}; text-transform:uppercase; font-style:italic;}
+ 
+/* SEARCH -----------------------------------*/
+input[type=text] {background-color:#000; color:#fff; padding:25px; border-style:none; font-size:14px;margin-top:8px; outline:0; font-style:italic;} input[type=submit] {background-color:{color:Header BG}; font-weight:bold; letter-spacing:1px; font-size:26px; margin-left:-15px; color:#fff; border-style:none; outline:0; font-family:calibri;}
+ 
+/* PAGIN & DISCLAIMER --------------------------------*/
+#pagin {clear:both; position: relative; bottom:0; left:0; width:100%; height:auto; background-color:{color:Header BG}; font-size:25px; padding:18px 15px 5px 0px; margin-left:-10px; z-index:901; color:{color:Sidebar Title};} #pagin a {font-weight:bold; color:{color:Header Title}}
+.disclaimer {font-weight:bold; font-size:22px; color:{color:Header Title}; text-transform:uppercase; padding-bottom:3px;}
+.bottomdesc {font-size:11px; line-height:15px; width:300px; text-align:justify;}
+ 
+/* AUDIO -----------------------------------*/
+.audalbum {width:130px; height:130px; margin-right:20px;} .audplayer
+{position:absolute; background:#000; margin-top:-95px; margin-left:45px; border:10px solid #000; width:25px; height:25px; overflow:hidden; -webkit-border-radius: 100px;-moz-border-radius: 100px;border-radius: 100px;}
+ 
+/* NOTES -----------------------------------*/
+ol.notes {padding:10px;margin:25px 0px; list-style-type:none;}
+ol.notes li.note {padding:5px;}
+ol.notes li.note img.avatar {display:none; margin-right:10px;}
+iframe#tumblr_controls {position:fixed !important; top:0% !important;
+right:0% !important; -webkit-filter:invert(100%); opacity:1; z-index:9999;}
+ 
+::-webkit-scrollbar {width:8px; height:5px;}
+::-webkit-scrollbar-track-piece {background-color:#fff;}
+::-webkit-scrollbar-thumb {background-color:{color:Scrollbar};}
+::selection {background:{color:Header Sub BG}; color:{color:Header Sub Title}; /* Safari */}
+::-moz-selection {background:{color:Header Sub BG}; color:{color:Header Sub Title}; /* Firefox */}
+ 
+#page-slide{
+  background:{color:Header BG};
+  width:300px;
+  display: block;
+  height: 100%;
+  left:-300px; z-index:5;
+  position: fixed;
+  transition: left 0.2s linear;
+  top: 0; z-index:99991;}
+.slide{
+  left: -50px !important;}
+.slide-tog{
+  left:250px !important; top:0px !important;}
+ 
+#toggle{
+  width: 50px;
+  height: 50px; font-size:30px; font-weight: bold;
+  background-color:{color:Header BG}; color:{color:Side Links};
+  position: fixed; line-height: 0.9em;
+  top: 60px;
+  left: 0;
+  border: none; outline:0;
+  cursor: pointer;
+  transition: left 0.2s linear;}
+ 
+#toggle p{
+  color:{color:Side Links};
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 0.9em;
+  padding: 0 0 0 0px;}
+ 
+#page-slide nav.main ul{
+  list-style: none;
+  margin: 50px 0 0 0;}
+#page-slide nav.main ul li{}
+#page-slide nav.main ul li a{
+  color: #ffffff;
+  font: 400 16px/16px 'PT Sans', sans-serfi;
+  text-decoration: none; font-weight:bold;
+  text-transform:uppercase;
+  display: block; padding: 15px 25px;
+  border-bottom: 1px solid #2f2f2f;
+  -webkit-transition: background 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  -ms-transition: background 0.3s linear;
+  -o-transition: background 0.3s linear;
+  transition: background 0.3s linear;}
+#page-slide nav.main ul li a:hover{
+color: #fff; background:{color:Side Links BG};
+-webkit-box-shadow: inset -150px 0px 100px 5px {color:Bold}; box-shadow: inset -150px 0px 100px 5px {color:Bold};}
+ 
+ 
+{CustomCSS}
+</style>
+ 
+ 
+</head>
+ 
+<body>
+<setion id="page-slide">
+ <button id="toggle">
+      ≡
+</button>
+   
+    <nav class="main" role='navigation'>
+      <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="{text:2nd Link URL}">{text:2nd Link Title}</a></li>
+    <li><a href="{text:3rd Link URL}">{text:3rd Link Title}</a></li>
+    <li><a href="{text:4th Link URL}">{text:4th Link Title}</a></li>
+    <li><a href="{text:5th Link URL}">{text:5th Link Title}</a></li>
+    <li><a href="{text:6th Link URL}">{text:6th Link Title}</a></li>
+    <br><br>
+    <form onsubmit="return tagSearch(this)"><input type="text" size="18" name="tag" placeholder="Search" onfocus="if (this.value == '{text:Search Label}') {this.value=''}" onblur="if (this.value == '') {this.value='{text:Search Label}'}" />
+<input type="submit" value="➜" /></form>
+      </ul>
+    </nav>  
+  </setion><!-- #page-slide -->
+ 
+ 
+<div id="header">
+<div class="btitle">{title}</div> <div class="sb">{text:Subtitle}</div></div>
+ 
+<div id="sticky-anchor"></div>
+<div id="sticky">
+<div class="toplinks"><center></center></div>
+</div>
+ 
+<br>
+ 
+ 
+ 
+<div id="container2">
+<div id="headback">
+<div id="fadeshow1"></div></div>
+ 
+ 
+<div id="side"><br>
+ 
+<div class="welc">welcome</div>
+<div class="sidedesc">
+<div style="padding:15px;">{Description}</div></div>
+ 
+<br><br>
+<div class="welc">schedule</div>
+<div class="ssidedesc">
+<div style="padding:15px;">{text:Event 1}<br> {text:Event 2}<br> {text:Event 3}<br> {text:Event 4}<br> {text:Event 5}</div></div>
+<br><br>
+<div class="welc">{text:3rd Sidebar Title}</div>
+<div class="sidedesc">
+<div style="padding:15px;">{text:3rd Sidebar Content}</div></div>
+ <br><br>
+<div class="welc">{text:4th Sidebar Title}</div>
+<div class="sidedesc">
+<div style="padding:15px;">{text:4th Sidebar Content}</div></div>
+ <br><br>
+</div>
+ 
+<br><bR>
+<div id="postcontain">
+{block:Posts}
+ 
+{block:Text}
+<div id="picture">
+{block:HasTags}<div id="perm"><b class="date">{ShortMonth} {DayOfMonthWithZero} {ShortYear} @{12Hour}:{Minutes}{AmPm}</b>&nbsp; with <a href="{Permalink}">{NoteCountwithLabel}</a> {block:RebloggedFrom} &mdash; via <a href="{ReblogParentURL}">{ReblogParentName}</a> {/block:RebloggedFrom} {block:ContentSource}(&copy; <a href="{SourceURL}">{SourceTitle}</a>)  {/block:ContentSource}</div>{/block:HasTags}
+ 
+{block:Title}<div class="title">{Title}</div>{/block:Title}
+<div class="caption">{Body}</div>
+{block:HasTags}<Div id="source"><div class="tags"> <b>tags:</b>&nbsp;{block:Tags} <a href="{TagURL}" class="tag">{Tag}</a>{/block:Tags}</div><br><table style="margin-top:-25px;"><tr><td style="padding-right:10px">{LikeButton size="20" color="grey"}</td> <td>{ReblogButton size="20" color="grey"}</td></tr></table></div>{/block:HasTags}
+</div>{/block:Text}
+ 
+ 
+{block:Photo}
+<div id="picture">
+<div id="perm"><b class="date">{ShortMonth} {DayOfMonthWithZero} {ShortYear} @{12Hour}:{Minutes}{AmPm}</b>&nbsp; with <a href="{Permalink}">{NoteCountwithLabel}</a> {block:RebloggedFrom} &mdash; via <a href="{ReblogParentURL}">{ReblogParentName}</a> {/block:RebloggedFrom} {block:ContentSource}(&copy; <a href="{SourceURL}">{SourceTitle}</a>)  {/block:ContentSource}</div>
+ 
+<A href="{Permalink}">{LinkOpenTag}<img class="picturebord" src="{PhotoURL-500}" width="500"/>{LinkCloseTag}</a><br>
+{block:Caption}<table style="margin-left:-3px;"><tr><td><div class="caption">{Caption}</div></td></tr></table>{/block:Caption}
+ 
+<Div id="source">{block:HasTags}<div class="tags"> <b>tags:</b>&nbsp;{block:Tags} <a href="{TagURL}" class="tag">{Tag}</a>{/block:Tags}</div>{/block:HasTags}<br><table style="margin-top:-25px;"><tr><td style="padding-right:10px">{LikeButton size="20" color="grey"}</td> <td>{ReblogButton size="20" color="grey"}</td></tr></table></div>
+</div>{/block:Photo}
+ 
+ 
+{block:Photoset}
+<div id="picture">
+<div id="perm"><b class="date">{ShortMonth} {DayOfMonthWithZero} {ShortYear} @{12Hour}:{Minutes}{AmPm}</b>&nbsp; with <a href="{Permalink}">{NoteCountwithLabel}</a> {block:RebloggedFrom} &mdash; via <a href="{ReblogParentURL}">{ReblogParentName}</a> {/block:RebloggedFrom} {block:ContentSource}(&copy; <a href="{SourceURL}">{SourceTitle}</a>)  {/block:ContentSource}</div>
+ 
+<div class="picturebord">{Photoset-500}</div>
+{block:Caption}<table style="margin-left:-3px;"><tr><td><div class="caption">{Caption}</div></td></tr></table>{/block:Caption}
+ 
+<Div id="source">{block:HasTags}<div class="tags"> <b>tags:</b>&nbsp;{block:Tags} <a href="{TagURL}" class="tag">{Tag}</a>{/block:Tags}</div>{/block:HasTags}<br><table style="margin-top:-25px;"><tr><td style="padding-right:10px">{LikeButton size="20" color="grey"}</td> <td>{ReblogButton size="20" color="grey"}</td></tr></table></div>
+</div>{/block:Photoset}
+ 
+ 
+{block:Audio}
+<div id="picture">
+<div id="perm"><b class="date">{ShortMonth} {DayOfMonthWithZero} {ShortYear} @{12Hour}:{Minutes}{AmPm}</b>&nbsp; with <a href="{Permalink}">{NoteCountwithLabel}</a> {block:RebloggedFrom} &mdash; via <a href="{ReblogParentURL}">{ReblogParentName}</a> {/block:RebloggedFrom} {block:ContentSource}(&copy; <a href="{SourceURL}">{SourceTitle}</a>)  {/block:ContentSource}</div>
+ 
+<table><tr><td><img class="audalbum" style="border:1px solid #f2f2f2; padding:3px;" src="{block:AlbumArt}{AlbumArtURL}{/block:AlbumArt}"> <div class="audplayer">{block:AudioPlayer}{AudioPlayerBlack} {/block:AudioPlayer}</div></td> <td style="font-size:17px; line-height:18px;">{block:TrackName}<b>Title:</b> {TrackName}<BR>{/block:TrackName} {block:Artist}<b>Artist:</b> {Artist}<br>{/block:Artist} {block:PlayCount}<b>Plays:</b> {PlayCount}{/block:PlayCount}</div></td></tr></table>
+{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+<Div id="source">{block:HasTags}<div class="tags"> <b>tags:</b>&nbsp;{block:Tags} <a href="{TagURL}" class="tag">{Tag}</a>{/block:Tags}</div>{/block:HasTags}<br><table style="margin-top:-25px;"><tr><td style="padding-right:10px">{LikeButton size="20" color="grey"}</td> <td>{ReblogButton size="20" color="grey"}</td></tr></table></div>
+</div>{/block:Audio}
+ 
+ 
+{block:Quote}
+<div id="picture">
+<div id="perm"><b class="date">{ShortMonth} {DayOfMonthWithZero} {ShortYear} @{12Hour}:{Minutes}{AmPm}</b>&nbsp; with <a href="{Permalink}">{NoteCountwithLabel}</a> {block:RebloggedFrom} &mdash; via <a href="{ReblogParentURL}">{ReblogParentName}</a> {/block:RebloggedFrom} {block:ContentSource}(&copy; <a href="{SourceURL}">{SourceTitle}</a>)  {/block:ContentSource}</div>
+ 
+<div class="title">"{Quote}"</div>{block:Source}<blockquote> — {Source}</blockquote>{/block:Source}
+<Div id="source">{block:HasTags}<div class="tags"> <b>tags:</b>&nbsp;{block:Tags} <a href="{TagURL}" class="tag">{Tag}</a>{/block:Tags}</div>{/block:HasTags}<br><table style="margin-top:-25px;"><tr><td style="padding-right:10px">{LikeButton size="20" color="grey"}</td> <td>{ReblogButton size="20" color="grey"}</td></tr></table></div>
+</div>{/block:Quote}
+ 
+ 
+{block:Video}
+<div id="picture">
+<div id="perm"><b class="date">{ShortMonth} {DayOfMonthWithZero} {ShortYear} @{12Hour}:{Minutes}{AmPm}</b>&nbsp; with <a href="{Permalink}">{NoteCountwithLabel}</a> {block:RebloggedFrom} &mdash; via <a href="{ReblogParentURL}">{ReblogParentName}</a> {/block:RebloggedFrom} {block:ContentSource}(&copy; <a href="{SourceURL}">{SourceTitle}</a>)  {/block:ContentSource}</div>
+ 
+<div class="picturebord">{video-500}</div>
+{block:Caption}<table style="margin-left:-3px;"><tr><td><div class="caption">{Caption}</div></td></tr></table>{/block:Caption}
+<Div id="source">{block:HasTags}<div class="tags"> <b>tags:</b>&nbsp;{block:Tags} <a href="{TagURL}" class="tag">{Tag}</a>{/block:Tags}</div>{/block:HasTags}<br><table style="margin-top:-25px;"><tr><td style="padding-right:10px">{LikeButton size="20" color="grey"}</td> <td>{ReblogButton size="20" color="grey"}</td></tr></table></div>
+</div>{/block:Video}
+ 
+ 
+{block:Link}
+<div id="picture">
+<div id="perm"><b class="date">{ShortMonth} {DayOfMonthWithZero} {ShortYear} @{12Hour}:{Minutes}{AmPm}</b>&nbsp; with <a href="{Permalink}">{NoteCountwithLabel}</a> {block:RebloggedFrom} &mdash; via <a href="{ReblogParentURL}">{ReblogParentName}</a> {/block:RebloggedFrom} {block:ContentSource}(&copy; <a href="{SourceURL}">{SourceTitle}</a>)  {/block:ContentSource}</div>
+ 
+<div class="title"><a href="{URL}" style="color:{color:Title Color};" {Target}>→ {Name}</a></div>{block:Description}{Description}{/block:Description}<br>
+<Div id="source">{block:HasTags}<div class="tags"> <b>tags:</b>&nbsp;{block:Tags} <a href="{TagURL}" class="tag">{Tag}</a>{/block:Tags}</div>{/block:HasTags}<br><table style="margin-top:-25px;"><tr><td style="padding-right:10px">{LikeButton size="20" color="grey"}</td> <td>{ReblogButton size="20" color="grey"}</td></tr></table></div>
+</div>{/block:Link}
+ 
+ 
+{block:Chat}
+<div id="picture">
+<div id="perm"><b class="date">{ShortMonth} {DayOfMonthWithZero} {ShortYear} @{12Hour}:{Minutes}{AmPm}</b>&nbsp; with <a href="{Permalink}">{NoteCountwithLabel}</a> {block:RebloggedFrom} &mdash; via <a href="{ReblogParentURL}">{ReblogParentName}</a> {/block:RebloggedFrom} {block:ContentSource}(&copy; <a href="{SourceURL}">{SourceTitle}</a>)  {/block:ContentSource}</div>
+ 
+{block:Title}<div class="title">{Title}</div>{/block:Title}
+<div class="chat">{block:Lines}
+<div class="lines"><div class="line {Alt}">
+{block:Label}<b>{Label}</b>{/block:Label} {Line}</div></div>{/block:Lines}
+<Div id="source">{block:HasTags}<div class="tags"> <b>tags:</b>&nbsp;{block:Tags} <a href="{TagURL}" class="tag">{Tag}</a>{/block:Tags}</div>{/block:HasTags}<br><table style="margin-top:-25px;"><tr><td style="padding-right:10px">{LikeButton size="20" color="grey"}</td> <td>{ReblogButton size="20" color="grey"}</td></tr></table></div>
+</div></div>{/block:Chat}
+ 
+ 
+{block:Answer}
+<div id="picture">
+<div id="perm"><b class="date">{ShortMonth} {DayOfMonthWithZero} {ShortYear} @{12Hour}:{Minutes}{AmPm}</b>&nbsp; with <a href="{Permalink}">{NoteCountwithLabel}</a> {block:RebloggedFrom} &mdash; via <a href="{ReblogParentURL}">{ReblogParentName}</a> {/block:RebloggedFrom} {block:ContentSource}(&copy; <a href="{SourceURL}">{SourceTitle}</a>)  {/block:ContentSource}</div>
+ 
+<table><tr><td><img src="{AskerPortraitURL-30}"></img></td>
+<td><div id="question" style="width:460px;"><b>{Asker}</b>: {Question}</div></td></tr></table><br>
+{Answer}
+<Div id="source">{block:HasTags}<div class="tags"> <b>tags:</b>&nbsp;{block:Tags} <a href="{TagURL}" class="tag">{Tag}</a>{/block:Tags}</div>{/block:HasTags}<br><table style="margin-top:-25px;"><tr><td style="padding-right:10px">{LikeButton size="20" color="grey"}</td> <td>{ReblogButton size="20" color="grey"}</td></tr></table></div>
+</div>{/block:Answer}
+ 
+{block:PermalinkPage}
+<div id="pictureperm">
+ 
+{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+</div>{/block:PermalinkPage}
+ 
+<!--{block:NoRebloggedFrom}{block:RebloggedFrom}{ReblogParentName}{/block:RebloggedFrom}{/block:NoRebloggedFrom} -->
+{/block:Posts}
+</div>
+</div>
+ 
+<script>
+// ----------- Simple Toggle (use this) --------------//
+$('button#toggle').click(function() {
+    $('#page-slide').toggleClass('slide');
+    $('#toggle').toggleClass('slide-tog');
+});
+</script>
+ 
+</body>
+</div>
+{block:Pagination}<div id="pagin"><center><table><tr><td valign="top" style="padding-right:200px;"><div class="bottomdesc"><br>
+<div class="disclaimer">Disclaimer</div><br>
+{text:Disclaimer}</div></td> <td style="font-size:20px; font-style:italic; text-transform:uppercase; letter-spacing:1px;">{block:PreviousPage} <a href="{PreviousPage}">back</a> {/block:PreviousPage}{block:NextPage} <a href="{NextPage}">next</a>{/block:NextPage}</td>
+ 
+<td width="250"><Center><span style="font-size:10px; line-height:10px; color:#616161;">Powered by Tumblr<br> Theme by <a href="http://99mb.tumblr.com/">99mb</a></span></Center></td></tr></table></Center><br><br>
+{/block:Pagination}</div>
+</html>
